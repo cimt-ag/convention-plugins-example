@@ -1,0 +1,14 @@
+plugins {
+	alias(libs.plugins.asciidoctorConvention)
+	alias(libs.plugins.applicationConvention)
+	alias(libs.plugins.libraryConvention)
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+wrapper {
+    gradleVersion = libs.versions.gradle.get()
+}

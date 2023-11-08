@@ -1,0 +1,8 @@
+plugins {
+    id 'de.cimt.asciidoctor-conventions'
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}

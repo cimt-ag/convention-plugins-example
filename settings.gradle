@@ -1,0 +1,32 @@
+pluginManagement {
+    plugins {
+    }
+    resolutionStrategy {
+    }
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/cimt-ag/convention-plugins")
+            credentials(PasswordCredentials)
+        }
+        gradlePluginPortal()
+    }   
+}
+dependencyResolutionManagement {
+    repositories {
+	    maven {
+		    name = 'GitHubPackages'
+		    url = uri("https://maven.pkg.github.com/cimt-ag/version-catalog")
+		    credentials(PasswordCredentials)
+		}
+	}
+    versionCatalogs {
+        libs {
+            from("de.cimt:version-catalog:1.0.0-SNAPSHOT")
+        }
+    }
+}
+rootProject.name = 'convention-plugins-example'
+include "docs"
+include "library"
+include "app"
